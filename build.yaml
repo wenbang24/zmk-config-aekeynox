@@ -89,14 +89,14 @@ include:
     shield: lily58_right
     artifact-name: lily58_right
 
-    # Temper/Chocofi + nice!nano v2
+    # Chocofi + nice!nano v2 (no displays)
   - board: nice_nano@2//zmk
-    shield: temper_left nice_view_adapter nice_view
+    shield: temper_left
     artifact-name: temper_left
     snippet: studio-rpc-usb-uart
     cmake-args: *cmake-args
   - board: nice_nano@2//zmk
-    shield: temper_right nice_view_adapter nice_view
+    shield: temper_right
     artifact-name: temper_right
 
   # Re-gret + XIAO RP2040

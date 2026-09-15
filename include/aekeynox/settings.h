@@ -1,10 +1,9 @@
-// By default, the firmware will be built with HRM support for a QWERTY computer.
-// Uncomment definitions in this file to activate options.
-
+// By default, the firmware will be built with HRM support for a QWERTY
+// computer. Uncomment definitions in this file to activate options.
 
 /******************************************************************************
  * Host Computer (keyboard layout and OS)
-******************************************************************************/
+ ******************************************************************************/
 
 // Uncomment one of the following lines if the host computer is configured with
 // a non-QWERTY-ANSI keyboard layout. This is required to set an appropriate
@@ -41,13 +40,12 @@
 // Some keyboard layouts and shortcuts may vary between Windows / macOS / Linux.
 // Uncomment one of the following lines if the host computer doen't run Windows.
 
-// #define MACOS
+#define MACOS
 // #define LINUX
-
 
 /******************************************************************************
  * Extra Layers
-******************************************************************************/
+ ******************************************************************************/
 
 // By default, Ækeynox fits all non-ASCII layouts on a 3×10 grid by:
 //  - replacing the the semicolon key by a one-shot layer key (1dk)
@@ -58,17 +56,16 @@
 // Alternatively, you may uncomment the last line to use the outer columns
 // for 4 extra alpha keys instead of the default Tab, Escape, Backspace, Enter.
 
-// #define KB_EXTRA_LAYERS_AUTO      // default (recommended)
+#define KB_EXTRA_LAYERS_AUTO // default (recommended)
 // #define KB_EXTRA_LAYERS_ALTGR     // default for LV, PL, RO
 // #define KB_EXTRA_LAYERS_ALPINE    // default for CH, DE, IT
 // #define KB_EXTRA_LAYERS_IBERICAN  // default for BR, ES, LATAM, PT
 // #define KB_EXTRA_LAYERS_NORDIC    // default for DK, FI, NO, SE
 // #define KB_EXTRA_LAYERS_NONE      // no 1dk layers, use outer cols
 
-
 /******************************************************************************
  * Layout Emulation
-******************************************************************************/
+ ******************************************************************************/
 
 // [Experimental]
 // Uncomment one of the following lines to enable layout emulation,
@@ -86,7 +83,8 @@
 
 // [Experimental]
 // Uncomment the following line for an extended character support on Windows.
-// Useless on QWERTY/English keymaps or non-Windows hosts, recommended otherwise.
+// Useless on QWERTY/English keymaps or non-Windows hosts, recommended
+// otherwise.
 // XXX This assumes NumLock is ON. It will not work otherwise.
 
 // #define ENABLE_CP1252_ALT_CODES
@@ -97,46 +95,44 @@
 
 // #define ENABLE_FANCY_DEAD_KEYS
 
-
 /******************************************************************************
  * Hold-Taps
-******************************************************************************/
+ ******************************************************************************/
 
 // Uncomment one of the following lines to pick your preferred hold-tap config.
 
 // #define HT_NONE
 // #define HT_THUMB_TAPS
 // #define HT_HOME_ROW_MODS  // (default behavior)
-// #define HT_TWO_THUMB_KEYS
+#define HT_TWO_THUMB_KEYS
 
 // Timing is key! Keep the default value if unsure.
 // This defines how long (in ms) a hold-tap key with the "tap-preferred" flavor
 // must be held to be considered as a modifier or layer shift. These hold-taps
-// are the ones that may produce text, including the space bar and home row mods.
-// Keep this value high if you struggle with home row mods.
+// are the ones that may produce text, including the space bar and home row
+// mods. Keep this value high if you struggle with home row mods.
 
-// #define TAPPING_TERM 300
+#define TAPPING_TERM 250
 
 // This defines how quickly (in ms) you need to press and release a hold-tap
 // with the "hold-preferred" flavor for it to be considered a tap. These
 // hold-taps include the ones that don’t produce text when tapped.
 // Keep this value low if you press Enter or Escape by mistake too often.
 
-// #define SHORT_TAPPING_TERM 150
+#define SHORT_TAPPING_TERM 150
 
 // When tapping then holding the same tap-hold, if the delay between the two
 // key presses is lower than `QUICK_TAP`, the tap-hold will hold the tap action
 // instead of the hold action. Again, keep the default value if unsure.
 
-// #define QUICK_TAP 200
+#define QUICK_TAP 200
 
 // For more information on how hold-taps operate, feel free to read ZMK’s docs:
 // https://zmk.dev/docs/keymaps/behaviors/hold-tap
 
-
 /******************************************************************************
  * Other Options
-*****************************************************************************/
+ *****************************************************************************/
 
 // Uncomment the following line to split the NavNum layer in two:
 //  - one layer for vim-style navigation (right) and GUI shortcuts (left)
@@ -156,14 +152,15 @@
 // Uncomment the following line to enable the "mod-hold behavior" on the left
 // hand’s navigation layer key. Enabling this means that if the Alt key is held
 // when entering the navigation layer, Alt will only be released when nav is
-// released. This enables one-handed alt-tabs, but may cause unwanted side effects.
+// released. This enables one-handed alt-tabs, but may cause unwanted side
+// effects.
 
 // #define ENABLE_MOD_HOLD_NAVIGATION
 
 // Uncomment the following line to enable shift as a pinky HRM.
 // Useful for combined shortcuts, but NOT MEANT to type text!
 
-// #define HRM_SHIFT
+#define HRM_SHIFT
 
 // [Experimental]
 // Uncomment the following line to enable a mod-hold behavior when holding
@@ -180,9 +177,9 @@
 // [Experimental]
 // Uncomment the following line to enable a hummingbird-style adaptation of
 // your keyboard layout. Keys that are originally on the ZBN/ QWERTY-positions
-// will be duplicated on a 1dk layer. This reduces the number of keys required to
-// write texts, and thus limits finger movement (at the cost of a couple of extra
-// keystrokes). The adaptations are layout-specific; as of today, only Ergol is
-// supported.
+// will be duplicated on a 1dk layer. This reduces the number of keys required
+// to write texts, and thus limits finger movement (at the cost of a couple of
+// extra keystrokes). The adaptations are layout-specific; as of today, only
+// Ergol is supported.
 
 // #define ENABLE_HUMMINGBIRD_MODE
