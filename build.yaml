@@ -90,7 +90,7 @@ include:
     artifact-name: lily58_right
 
     # Chocofi + nice!nano v2 (no displays)
-    # Temper geometry with Chocofi GPIO overrides in config/temper.keymap.
+    # Temper geometry with Chocofi GPIO overrides in config/temper_{left,right}.keymap.
   - board: nice_nano@2//zmk
     shield: temper_left
     artifact-name: temper_left

@@ -2,7 +2,14 @@ name: Build ZMK firmware
 on: [push, workflow_dispatch]
 
 jobs:
+  chocofi-pinout:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tests/check_chocofi.py
+
   build:
+    needs: chocofi-pinout
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
     with:
       archive_name: firmware-selenium
