@@ -40,7 +40,8 @@ with tempfile.TemporaryDirectory() as tmp:
         columns = re.findall(r"col-gpios\s*=\s*(.*?);", result, re.S)[-1]
         actual = [int(pin) for pin in re.findall(r"&pro_micro\s+(\d+)", columns)]
         assert actual == expected, f"{side}: scan pins {actual}, expected {expected}"
+        # Physical left-to-right order: left pair active, gap, right pair active.
         assert result.split("KEYS", 1)[1].split() == [f"K{i}" for i in range(30)] + [
-            "&none", "LT1", "LT2", "RT2", "RT1", "&none"
+            "LT1", "LT2", "&none", "&none", "RT2", "RT1"
         ]
         print(f"PASS {side}: {keymap.name}, Chocofi pins, all 36 key positions")

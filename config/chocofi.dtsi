@@ -1,4 +1,4 @@
-// Chocofi: use the inner two thumb keys on each half, outer thumbs inactive.
+// Chocofi: left two thumbs on the left half, right two on the right half.
 #define FOUR_THUMB_KEYS
 
 #define SELENIUM_KEYMAP_BINDINGS(LOUT1,  LROW1,  RROW1,  ROUT1, \
@@ -8,6 +8,6 @@
       LROW1   RROW1 \
       LROW2   RROW2 \
       LROW3   RROW3 \
-&none LT1 LT2  RT2 RT1 &none
+LT1 LT2 &none  &none RT2 RT1
 
 #include <aekeynox/selenium.keymap>
