@@ -2,6 +2,12 @@ name: Test keymap options
 on: [pull_request, workflow_dispatch]
 
 jobs:
+  chocofi-pinout:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tests/check_chocofi.py
+
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@c62da0e16646d10240ba29191bdbcb5611b3a1af
     with:

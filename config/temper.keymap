@@ -11,3 +11,24 @@
 &none LT1 LT2  RT2 RT1 &none
 
 #include <aekeynox/selenium.keymap>
+
+// Reuse Temper's 36-key transform, but scan Chocofi's actual column pins.
+// Chocofi uses Pro Micro 20,19,18,15,14; Temper uses 21,20,19,18,15.
+// Rows are identical (4,5,6,7). The right PCB mirrors the column order.
+&kscan0 {
+    col-gpios
+#if defined(CONFIG_SHIELD_TEMPER_LEFT)
+        = <&pro_micro 20 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 19 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 18 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 15 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 14 GPIO_ACTIVE_HIGH>
+#elif defined(CONFIG_SHIELD_TEMPER_RIGHT)
+        = <&pro_micro 14 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 15 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 18 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 19 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 20 GPIO_ACTIVE_HIGH>
+#endif
+        ;
+};
